@@ -1,4 +1,4 @@
-This [OpenSeadragon](https://openseadragon.github.io/) plugin provides
+This [OpenSeadragon](http://openseadragon.github.io/) plugin provides
 the capability to add filters to the images.
 
 A demo is available [here](https://pages.nist.gov/OpenSeadragonFiltering/).
@@ -262,7 +262,7 @@ edge effects around tiles.
 
 ### Build the demo
 
-To build the demo run `npm install` and then `npm run build`.
+To build the demo run `npm install` and then `npm run-script build`.
 The result of the build will be in the `dist` folder.
 
 ### Disclaimer:

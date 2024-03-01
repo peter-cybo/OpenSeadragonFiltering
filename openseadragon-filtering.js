@@ -10,12 +10,9 @@
  * software is used.
  */
 
-/* This current filter has been forked and the current owner and maintainer is Peter of Cybo. */
-
 /**
  *
  * @author Antoine Vandecreme <antoine.vandecreme@nist.gov>
- * @author Peter Koh <peter.koh@cybo.co.jp> -- forked owner
  */
 (function() {
 

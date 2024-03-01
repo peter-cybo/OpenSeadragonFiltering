@@ -39,7 +39,7 @@ added 657 packages, and audited 658 packages in 16s
 81 vulnerabilities (1 low, 52 moderate, 21 high, 7 critical)
 
 
-### post upgrade
+### post npm audit fix
 
 $ npm audit fix
 npm WARN audit fix ini@1.3.5 node_modules/fsevents/node_modules/ini
@@ -316,3 +316,249 @@ node_modules/shelljs
   node_modules/eslint
 
 52 vulnerabilities (41 moderate, 9 high, 2 critical)
+
+
+### post npm audit fix
+
+
+$ npm audit fix --force
+npm WARN using --force Recommended protections disabled.
+npm WARN audit No fix available for css-loader@0.6.0 - 1.0.1
+npm WARN audit Updating eslint to 8.57.0, which is a SemVer major change.
+npm WARN audit No fix available for webpack-jquery-ui@*
+npm WARN ERESOLVE overriding peer dependency
+npm WARN While resolving: openseadragon-filtering@1.0.0
+npm WARN Found: eslint@2.13.1
+npm WARN node_modules/eslint
+npm WARN   peer eslint@">=1.6.0 <5.0.0" from eslint-loader@1.9.0
+npm WARN   node_modules/eslint-loader
+npm WARN     dev eslint-loader@"^1.3.0" from the root project
+npm WARN   1 more (the root project)
+npm WARN
+npm WARN Could not resolve dependency:
+npm WARN peer eslint@">=1.6.0 <5.0.0" from eslint-loader@1.9.0
+npm WARN node_modules/eslint-loader
+npm WARN   dev eslint-loader@"^1.3.0" from the root project
+
+added 68 packages, removed 63 packages, changed 18 packages, and audited 676 packages in 11s
+
+30 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+color-string  <1.5.5
+Severity: moderate
+Regular Expression Denial of Service (ReDOS) - https://github.com/advisories/GHSA-257v-vj4p-3w2h
+No fix available
+node_modules/color-string
+  color  <=0.11.4
+  Depends on vulnerable versions of color-string
+  node_modules/color
+    colormin  *
+    Depends on vulnerable versions of color
+    node_modules/colormin
+      postcss-colormin  <=4.0.1
+      Depends on vulnerable versions of colormin
+      Depends on vulnerable versions of postcss
+      node_modules/postcss-colormin
+        cssnano  <=4.1.0
+        Depends on vulnerable versions of autoprefixer
+        Depends on vulnerable versions of postcss
+        Depends on vulnerable versions of postcss-calc
+        Depends on vulnerable versions of postcss-colormin
+        Depends on vulnerable versions of postcss-convert-values
+        Depends on vulnerable versions of postcss-discard-comments
+        Depends on vulnerable versions of postcss-discard-duplicates
+        Depends on vulnerable versions of postcss-discard-empty
+        Depends on vulnerable versions of postcss-discard-overridden
+        Depends on vulnerable versions of postcss-discard-unused
+        Depends on vulnerable versions of postcss-filter-plugins
+        Depends on vulnerable versions of postcss-merge-idents
+        Depends on vulnerable versions of postcss-merge-longhand
+        Depends on vulnerable versions of postcss-merge-rules
+        Depends on vulnerable versions of postcss-minify-font-values
+        Depends on vulnerable versions of postcss-minify-gradients
+        Depends on vulnerable versions of postcss-minify-params
+        Depends on vulnerable versions of postcss-minify-selectors
+        Depends on vulnerable versions of postcss-normalize-charset
+        Depends on vulnerable versions of postcss-normalize-url
+        Depends on vulnerable versions of postcss-ordered-values
+        Depends on vulnerable versions of postcss-reduce-idents
+        Depends on vulnerable versions of postcss-reduce-initial
+        Depends on vulnerable versions of postcss-reduce-transforms
+        Depends on vulnerable versions of postcss-svgo
+        Depends on vulnerable versions of postcss-unique-selectors
+        Depends on vulnerable versions of postcss-zindex
+        node_modules/cssnano
+          css-loader  0.6.0 - 1.0.1
+          Depends on vulnerable versions of cssnano
+          Depends on vulnerable versions of icss-utils
+          Depends on vulnerable versions of loader-utils
+          Depends on vulnerable versions of postcss
+          Depends on vulnerable versions of postcss-modules-extract-imports
+          Depends on vulnerable versions of postcss-modules-local-by-default
+          Depends on vulnerable versions of postcss-modules-scope
+          Depends on vulnerable versions of postcss-modules-values
+          node_modules/css-loader
+          node_modules/webpack-jquery-ui/node_modules/css-loader
+            webpack-jquery-ui  *
+            Depends on vulnerable versions of css-loader
+            node_modules/webpack-jquery-ui
+
+glob-parent  <5.1.2
+Severity: high
+glob-parent vulnerable to Regular Expression Denial of Service in enclosure regex - https://github.com/advisories/GHSA-ww39-953v-wcq6
+fix available via `npm audit fix`
+node_modules/glob-parent
+  chokidar  1.0.0-rc1 - 2.1.8
+  Depends on vulnerable versions of glob-parent
+  node_modules/watchpack-chokidar2/node_modules/chokidar
+    watchpack-chokidar2  *
+    Depends on vulnerable versions of chokidar
+    node_modules/watchpack-chokidar2
+      watchpack  1.7.2 - 1.7.5
+      Depends on vulnerable versions of watchpack-chokidar2
+      node_modules/watchpack
+  copy-webpack-plugin  5.0.1 - 5.1.2
+  Depends on vulnerable versions of glob-parent
+  node_modules/copy-webpack-plugin
+
+is-svg  2.1.0 - 4.2.2
+Severity: high
+ReDOS in IS-SVG - https://github.com/advisories/GHSA-r8j5-h5cx-65gg
+Regular Expression Denial of Service (ReDoS) - https://github.com/advisories/GHSA-7r28-3m3f-r2pr
+fix available via `npm audit fix`
+node_modules/is-svg
+
+js-yaml  <=3.13.0
+Severity: high
+Denial of Service in js-yaml - https://github.com/advisories/GHSA-2pr6-76vf-7546
+Code Injection in js-yaml - https://github.com/advisories/GHSA-8j8c-7jfh-h6hx
+fix available via `npm audit fix`
+node_modules/js-yaml
+  svgo  0.4.2 - 1.0.5
+  Depends on vulnerable versions of js-yaml
+  node_modules/svgo
+    postcss-svgo  <=4.0.0
+    Depends on vulnerable versions of postcss
+    Depends on vulnerable versions of svgo
+    node_modules/postcss-svgo
+
+json5  <1.0.2
+Severity: high
+Prototype Pollution in JSON5 via Parse Method - https://github.com/advisories/GHSA-9c47-m6qq-7p4h
+No fix available
+node_modules/css-loader/node_modules/json5
+  loader-utils  <=1.4.0
+  Depends on vulnerable versions of json5
+  node_modules/css-loader/node_modules/loader-utils
+
+
+postcss  <=8.4.30
+Severity: moderate
+Regular Expression Denial of Service in postcss - https://github.com/advisories/GHSA-566m-qj78-rww5
+PostCSS line return parsing error - https://github.com/advisories/GHSA-7fh5-64p2-3v2j
+No fix available
+node_modules/icss-utils/node_modules/postcss
+node_modules/postcss
+node_modules/postcss-modules-extract-imports/node_modules/postcss
+node_modules/postcss-modules-local-by-default/node_modules/postcss
+node_modules/postcss-modules-scope/node_modules/postcss
+node_modules/postcss-modules-values/node_modules/postcss
+node_modules/webpack-jquery-ui/node_modules/postcss
+  autoprefixer  1.0.20131222 - 8.6.5
+  Depends on vulnerable versions of postcss
+  node_modules/autoprefixer
+  icss-utils  <=3.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/icss-utils
+  postcss-calc  4.1.0 - 6.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-calc
+  postcss-convert-values  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-convert-values
+  postcss-discard-comments  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-discard-comments
+  postcss-discard-duplicates  1.1.0 - 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-discard-duplicates
+  postcss-discard-empty  1.1.0 - 4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-discard-empty
+  postcss-discard-overridden  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-discard-overridden
+  postcss-discard-unused  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-discard-unused
+  postcss-filter-plugins  *
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-filter-plugins
+  postcss-merge-idents  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-merge-idents
+  postcss-merge-longhand  <=4.0.5
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-merge-longhand
+  postcss-merge-rules  <=4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-merge-rules
+  postcss-minify-font-values  <=4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-minify-font-values
+  postcss-minify-gradients  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-minify-gradients
+  postcss-minify-params  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-minify-params
+  postcss-minify-selectors  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-minify-selectors
+  postcss-modules-extract-imports  <=1.2.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-modules-extract-imports
+  postcss-modules-local-by-default  <=1.2.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-modules-local-by-default
+  postcss-modules-scope  <=1.1.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-modules-scope
+  postcss-modules-values  <=1.3.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-modules-values
+  postcss-normalize-charset  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-charset
+  postcss-normalize-url  1.1.0 - 4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-url
+  postcss-ordered-values  <=4.1.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-ordered-values
+  postcss-reduce-idents  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-reduce-idents
+  postcss-reduce-initial  <=4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-reduce-initial
+  postcss-reduce-transforms  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-reduce-transforms
+  postcss-unique-selectors  <=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-unique-selectors
+  postcss-zindex  1.1.1 - 4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-zindex
+
+48 vulnerabilities (38 moderate, 8 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.

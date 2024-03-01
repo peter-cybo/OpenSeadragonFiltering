@@ -3,7 +3,7 @@ var path = require('path');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    mode: "development",
+    mode: 'development',
     context: __dirname,
     entry: ['./demo/demo.js'],
     output: {
@@ -15,7 +15,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                enforce: "pre",
+                enforce: 'pre',
                 loader: 'eslint-loader',
                 exclude: /node_modules/,
                 options: {
@@ -46,11 +46,11 @@ module.exports = {
         // options for resolving module requests
         // (does not apply to resolving to loaders)
         modules: [
-            "node_modules",
-            path.join(__dirname, "demo")
+            'node_modules',
+            path.join(__dirname, 'demo')
         ],
         // directories where to look for modules
-        extensions: [".js", ".json", ".jsx", ".css"]
+        extensions: ['.js', '.json', '.jsx', '.css']
     },
     plugins: [
         new CopyWebpackPlugin([{
@@ -86,3 +86,4 @@ module.exports = {
         )
     ]
 };
+

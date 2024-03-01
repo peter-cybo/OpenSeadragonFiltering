@@ -487,7 +487,31 @@
                 context.putImageData(imgData, 0, 0);
                 callback();
             };
-        }
+        },
+        RGBFUNCTION: function(red, green, blue, strength) {
+            // console.log('colors,', red, ': red', green, ': green', blue, ': blue', strength, ': strength')
+            if ((red || blue || green || strength) < 0) {
+                throw new Error('Colorize adjustment must be non-negative.');
+            }
+            return function(context, callback) {
+                var imgData = context.getImageData(
+                    0, 0, context.canvas.width, context.canvas.height,
+                    {willReadFrequently: true}
+                );
+                var pixels = imgData.data;
+
+                for (var i = 0; i < pixels.length; i += 4) {
+                    pixels[i] = Math.min(255, pixels[i] + red * strength);
+                    pixels[i + 1] = Math.min(
+                        255, pixels[i + 1] + green * strength);
+                    pixels[i + 2] = Math.min(
+                        255, pixels[i + 2] + blue * strength);
+                }
+
+                context.putImageData(imgData, 0, 0);
+                callback();
+            };
+        },
     };
 
 }());

@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "OpenSeadragon plugin providing filtering capabilities to the images.",
   "main": "openseadragon-filtering.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "clean": "rm -rf dist"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/usnistgov/OpenSeadragonFiltering.git"
@@ -37,10 +42,5 @@
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-jquery-ui": "^2.0.1"
-  },
-  "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "clean": "rm -rf dist"
   }
 }

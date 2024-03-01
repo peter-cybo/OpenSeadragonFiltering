@@ -9,7 +9,7 @@ module.exports = {
     output: {
         filename: 'demo-bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath:'dist/'
+        publicPath: 'dist/'
     },
     module: {
         rules: [
@@ -31,7 +31,7 @@ module.exports = {
                 },
             },
             {
-				test: /\.css$/,
+                test: /\.css$/,
                 include: /node_modules/,
                 use: ['style-loader', 'css-loader']
             },
@@ -63,7 +63,8 @@ module.exports = {
             from: 'demo/static',
             to: 'static'
         }, {
-            from: 'demo/*'
+            from: 'demo/style.css',
+            to: 'style.css'
         }
         ]),
         new webpack.LoaderOptionsPlugin({

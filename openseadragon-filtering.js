@@ -81,13 +81,13 @@
                 return;
             }
             var tile = event.tile;
-            var image = event.image;
-            if (image !== null && image !== undefined) {
+            var data = event.data;
+            if (data !== null && data !== undefined) {
                 var canvas = window.document.createElement('canvas');
-                canvas.width = image.width;
-                canvas.height = image.height;
+                canvas.width = data.width;
+                canvas.height = data.height;
                 var context = canvas.getContext('2d');
-                context.drawImage(image, 0, 0);
+                context.drawImage(data, 0, 0);
                 tile._renderedContext = context;
                 var callback = event.getCompletionCallback();
                 applyFilters(context, processors, callback);
@@ -489,7 +489,6 @@
             };
         },
         RGBFUNCTION: function(red, green, blue, strength) {
-            // console.log('colors,', red, ': red', green, ': green', blue, ': blue', strength, ': strength')
             if ((red || blue || green || strength) < 0) {
                 throw new Error('Colorize adjustment must be non-negative.');
             }

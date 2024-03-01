@@ -9,13 +9,13 @@
         "dot-location": [
             2,
             "property"
-        ]
+        ],
+        "space-before-function-paren": "off",
+        "space-before-blocks": "off",
+        "eslint-plugin-unicorn/explicit-length-check": "off"
     },
     "parserOptions": {
-        "ecmaVersion": 2017,
-        "ecmaFeatures": {
-            "modules": true
-        }
+        "ecmaVersion": 2017
     },
     "globals": {
         "window": true,
